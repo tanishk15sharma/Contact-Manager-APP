@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Sans:ital@0;1&family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Sans:ital@0;1&family=Open+Sans&family=Roboto:wght@700&display=swap");
 
 .header-container {
   text-align: center;
@@ -10,13 +11,54 @@
 }
 
 .AddContact-container {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .input-box1 {
   width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1%;
 }
 
 .input-box2 {
   width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1%;
+}
+.add-btn {
+  width: 15%;
+  padding: 0.6rem;
+  background-color: #2563eb;
+  color: white;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: larger;
+}
+.manager-box {
+  border-top: 1px solid lightgray;
+  /* margin-bottom: 1%; */
+  margin-top: 2%;
+}
+
+.item {
+  margin-top: 1%;
+}
+
+.contact-name {
+  font-weight: 500;
+}
+
+.btn-box {
+  text-align: end;
+}
+.del-btn {
+  /* display: flex; */
+
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: #2563eb;
+  color: white;
+  border: 0;
+  cursor: pointer;
 }

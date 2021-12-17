@@ -6,7 +6,9 @@ const AddContact = () => {
     <div className="AddContact-container">
       <h2>Add Contact</h2>
       <div className="name-container">
-        <lable>Name</lable>
+        <lable>
+          <strong>Name:</strong>
+        </lable>
         <input
           type="text"
           placeholder="Name"
@@ -15,7 +17,9 @@ const AddContact = () => {
         />
       </div>
       <div className="number-container">
-        <lable>Number</lable>
+        <lable>
+          <strong>Number:</strong>
+        </lable>
         <input
           type="text"
           placeholder="Number"
@@ -23,6 +27,7 @@ const AddContact = () => {
           className="input-box2"
         />
       </div>
+      <button className="add-btn">Add</button>
     </div>
   );
 };
