@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Sans:ital@0;1&family=Roboto:wght@700&display=swap");
+
+.header-container {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 200%;
+  margin: 20px auto;
+  border-bottom: 2px solid gray;
+  padding: 1rem;
+}
+
+.AddContact-container {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-box1 {
+  width: 100%;
+}
+
+.input-box2 {
+  width: 100%;
+}
