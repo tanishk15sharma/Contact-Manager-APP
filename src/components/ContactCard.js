@@ -15,8 +15,8 @@ const ContactCard = (props) => {
         <img
           className="del-btn"
           src="https://img.icons8.com/windows/50/fa314a/trash.png"
+          onClick={() => props.clickHandler(id)}
         />
-
         {/* <button className="del-btn">Remove</button> */}
       </div>
     </div>
