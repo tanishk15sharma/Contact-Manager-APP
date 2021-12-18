@@ -37,7 +37,7 @@
 }
 .manager-box {
   border-top: 1px solid lightgray;
-  /* margin-bottom: 1%; */
+  margin-bottom: 1%;
   margin-top: 2%;
 }
 
@@ -53,12 +53,20 @@
   text-align: end;
 }
 .del-btn {
+  font-size: xx-small;
   /* display: flex; */
-
-  padding: 0.5rem;
-  border-radius: 10px;
-  background-color: #2563eb;
-  color: white;
-  border: 0;
+  /* padding: 0.5rem; */
+  /* border-radius: 10px; */
+  /* background-color: #2563eb; */
+  /* color: white; */
+  /* border: 0; */
   cursor: pointer;
+}
+
+.avatar-img {
+  /* size: 10%; */
+  /* font-size: 10%; */
+  max-width: 10%;
+  border-radius: 100%;
+  /* padding: 1rem; */
 }
