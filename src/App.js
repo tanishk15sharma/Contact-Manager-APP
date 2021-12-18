@@ -14,7 +14,14 @@ function App() {
     setContacts([...contacts, contact]);
   };
 
-  useEffect(() => {}, [contacts]);
+  useEffect(() => {
+    const retriveContacts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)); //this is showing the contats after refresh
+    if (retriveContacts) setContacts(retriveContacts);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(contacts)); //this is storing the contacts in local storage
+  }, [contacts]);
 
   return (
     <div className="App">
