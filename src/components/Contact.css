@@ -70,3 +70,12 @@
   border-radius: 100%;
   /* padding: 1rem; */
 }
+
+.add-contact-btn {
+  background-color: #2563eb;
+  border: 0;
+  padding: 0.8rem;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+}

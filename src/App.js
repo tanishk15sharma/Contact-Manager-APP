@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { uuid } from "uuidv4";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./App.css";
 import AddContact from "./components/AddContact";
@@ -36,9 +36,26 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <AddContact addContactHandler={addContactHandler} />
-      <ContactList contacts={contacts} getContactId={removeContactHandler} />
+      <Router>
+        <Header />
+        <Routes>
+          <Route
+            path="/add"
+            element={<AddContact addContactHandler={addContactHandler} />}
+          />
+          <Route
+            path="/"
+            element={
+              <ContactList
+                contacts={contacts}
+                getContactId={removeContactHandler}
+              />
+            }
+          />
+        </Routes>
+        {/* <AddContact addContactHandler={addContactHandler} /> */}
+        {/* <ContactList contacts={contacts} getContactId={removeContactHandler} /> */}
+      </Router>
     </div>
   );
 }
