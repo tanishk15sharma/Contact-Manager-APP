@@ -5,7 +5,8 @@ const ContactList = (props) => {
   // console.log(props);
 
   const deleteContactHandler = (id) => {
-    props.getContactId(id);
+    props.getContactId(id); //this will give ID to App.js (to main parent  )
+    // console.log(id);
   };
 
   const renderContactList = props.contacts.map((contact) => {
@@ -19,7 +20,12 @@ const ContactList = (props) => {
     );
   });
 
-  return <div> {renderContactList} </div>;
+  return (
+    <div>
+      <h1>Contact List</h1>
+      {renderContactList}
+    </div>
+  );
 };
 
 export default ContactList;

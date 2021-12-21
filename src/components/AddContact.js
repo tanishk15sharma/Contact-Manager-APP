@@ -7,7 +7,6 @@ const AddContact = ({ addContactHandler }) => {
   const [state, setState] = useState({
     name: "",
     number: "",
-    age: "",
   });
 
   const changeHandler = (e) => {

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { uuid } from "uuidv4";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.css";
 import AddContact from "./components/AddContact";
 import Header from "./components/Header";
-import List from "./components/ContactList";
+import ContactList from "./components/ContactList";
 
 function App() {
   const [contacts, setContacts] = useState([]);
@@ -12,7 +13,7 @@ function App() {
 
   const addContactHandler = (contact) => {
     //we are getting contact from add.contact with the help of function addcontactHandler using props
-    console.log(contact);
+    console.log(contacts);
     setContacts([...contacts, { id: uuid(), ...contact }]);
   };
 
@@ -37,7 +38,7 @@ function App() {
     <div className="App">
       <Header />
       <AddContact addContactHandler={addContactHandler} />
-      <List contacts={contacts} getContactId={removeContactHandler} />
+      <ContactList contacts={contacts} getContactId={removeContactHandler} />
     </div>
   );
 }

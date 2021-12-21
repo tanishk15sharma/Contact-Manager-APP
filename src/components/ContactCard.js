@@ -15,7 +15,7 @@ const ContactCard = (props) => {
         <img
           className="del-btn"
           src="https://img.icons8.com/windows/50/fa314a/trash.png"
-          onClick={() => props.clickHandler(id)}
+          onClick={() => props.clickHandler(id)} //this will give id to contactList (its parent)
         />
         {/* <button className="del-btn">Remove</button> */}
       </div>
