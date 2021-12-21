@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import "./Contact.css";
+import { useNavigate } from "react-router-dom";
 
 // import { addContactHandler } from "./App.js";
 
-const AddContact = ({ addContactHandler }) => {
+const AddContact = (props) => {
+  const navigate = useNavigate();
+
   const [state, setState] = useState({
     name: "",
     number: "",
@@ -38,14 +41,21 @@ const AddContact = ({ addContactHandler }) => {
   // };
 
   const add = (e) => {
+    // const navigate = useNavigate();
+
     e.preventDefault();
     if (state.name === "" || state.number === "") {
       alert("ALl the fields are mandatory!");
       return;
     }
     console.log(state);
-    addContactHandler(state);
+    props.addContactHandler(state);
     setState({ name: "", number: "" });
+    // console.log(props);
+    // const navigate = useNavigate();
+    // props.history.push("/");
+    // useHistory().push("/");
+    navigate("/");
   };
 
   return (
