@@ -14,7 +14,7 @@ const AddContact = (props) => {
 
   const changeHandler = (e) => {
     const { name, value } = e.target; //using this method , we just have to create this handler and we can add asa many inputs
-    setState({ ...state, [name]: value });
+    setState((initialState) => ({ ...initialState, [name]: value }));
   };
 
   // console.log(this.props); //this is not avalible becasue it is a functional component
