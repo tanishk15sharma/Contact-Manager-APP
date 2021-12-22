@@ -88,3 +88,23 @@
 .detail-name {
   font-weight: bolder;
 }
+
+.btn-div {
+  text-align: center;
+}
+
+.btn-detail {
+  background-color: grey;
+  padding: 0.5rem;
+  border: 0;
+  border-radius: 5px;
+  font-size: larger;
+  cursor: pointer;
+}
+.main-detail {
+  /* text-align: center; */
+}
+.img-div {
+  text-align: center;
+  justify-content: center;
+}

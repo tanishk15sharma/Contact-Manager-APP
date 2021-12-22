@@ -8,13 +8,20 @@ const ContactDetails = () => {
   console.log(location.state); //this will take the object state and return it here
   const { name, id, number } = location.state.contact;
   return (
-    <div className="detail-container">
-      <div>
-        <img src={dummy} width={200} alt="user" />
+    <div className="main-detail">
+      <div className="detail-container">
+        <div className="img-div">
+          <img src={dummy} width={200} alt="user" />
+        </div>
+        <div className="detail-content">
+          <div className="detail-name">{name}</div>
+          <div className="detail-number">{number}</div>
+        </div>
       </div>
-      <div className="detail-content">
-        <div className="detail-name">{name}</div>
-        <div className="detail-number">{number}</div>
+      <div className="btn-div">
+        <Link to={"/"}>
+          <button className="btn-detail">Back To Contact List</button>
+        </Link>
       </div>
     </div>
   );
