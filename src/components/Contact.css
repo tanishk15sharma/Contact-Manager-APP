@@ -78,4 +78,13 @@
   cursor: pointer;
   color: white;
   border-radius: 5px;
+  margin-left: 16%;
+}
+
+.detail-container {
+  max-width: 40%;
+  border: 2px solid gray;
+}
+.detail-name {
+  font-weight: bolder;
 }

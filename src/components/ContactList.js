@@ -19,7 +19,7 @@ const ContactList = (props) => {
   // ];
 
   const renderContactList = props.contacts.map((contact) => {
-    console.log(contact.name);
+    // console.log(contact.name);
     return (
       <ContactCard
         contact={contact}
@@ -34,7 +34,7 @@ const ContactList = (props) => {
       <h1>
         Contact List
         <Link to="/add">
-          <button className="add-contact-btn">Add Contact</button>{" "}
+          <button className="add-contact-btn">Add Contact</button>
         </Link>
       </h1>
       {renderContactList}

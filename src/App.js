@@ -6,6 +6,7 @@ import "./App.css";
 import AddContact from "./components/AddContact";
 import Header from "./components/Header";
 import ContactList from "./components/ContactList";
+import ContactDetails from "./components/ContactDetail";
 
 function App() {
   const [contacts, setContacts] = useState([]);
@@ -52,6 +53,7 @@ function App() {
               />
             }
           />
+          <Route path="/contact/:id" element={<ContactDetails />} />
         </Routes>
         {/* <AddContact addContactHandler={addContactHandler} /> */}
         {/* <ContactList contacts={contacts} getContactId={removeContactHandler} /> */}
