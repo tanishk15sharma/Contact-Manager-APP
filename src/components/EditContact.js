@@ -1,13 +1,17 @@
 import React, { useState } from "react";
+
 import "./Contact.css";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const EditContact = (props) => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const { id, name, number } = location.state.contact;
 
   const [state, setState] = useState({
-    name: "",
-    number: "",
+    id,
+    name,
+    number,
   });
 
   const changeHandler = (e) => {
