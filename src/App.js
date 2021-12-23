@@ -19,13 +19,14 @@ function App() {
     return response.data;
   };
 
-  const addContactHandler = (contact) => {
+  const addContactHandler = async (contact) => {
     //we are getting contact from add.contact with the help of function addcontactHandler using props
-    console.log(contacts);
-    setContacts((initialContacts) => [
-      ...initialContacts,
-      { id: uuid(), ...contact },
-    ]);
+    const request = {
+      id: uuid(),
+      ...contact,
+    };
+    const response = await api.post("contacts", request);
+    setContacts([...contacts, response.data]);
   };
 
   const removeContactHandler = (id) => {
@@ -51,7 +52,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(contacts)); //this is storing the contacts in local storage
+    //  localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(contacts)); //this is storing the contacts in local storage
   }, [contacts]);
 
   return (
