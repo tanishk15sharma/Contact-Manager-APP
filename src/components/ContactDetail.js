@@ -6,7 +6,7 @@ import dummy from "./dummy.png";
 const ContactDetails = () => {
   const location = useLocation();
   console.log(location.state); //this will take the object state and return it here
-  const { name, id, number } = location.state.contact;
+  const { name, number } = location.state.contact;
   return (
     <div className="main-detail">
       <div className="detail-container">

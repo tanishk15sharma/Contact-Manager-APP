@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { uuid } from "uuidv4";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import api from "./api/contacts";
 
 import "./App.css";
 import AddContact from "./components/AddContact";
@@ -11,6 +12,12 @@ import ContactDetails from "./components/ContactDetail";
 function App() {
   const [contacts, setContacts] = useState([]);
   const LOCAL_STORAGE_KEY = "contacts";
+
+  //this will retrieve contacts
+  const retrieveContacts = async () => {
+    const response = await api.get("contacts");
+    return response.data;
+  };
 
   const addContactHandler = (contact) => {
     //we are getting contact from add.contact with the help of function addcontactHandler using props
@@ -29,9 +36,18 @@ function App() {
     setContacts(newContactList);
   };
 
+  //previously we are taking data from local storage .
+  //Now we will take the data from the server
   useEffect(() => {
-    const retriveContacts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)); //this is showing the contats after refresh
-    if (retriveContacts) setContacts(retriveContacts);
+    // const retriveContacts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)); //this is showing the contats after refresh
+    // if (retriveContacts) setContacts(retriveContacts);
+
+    const getAllContacts = async () => {
+      const allContacts = await retrieveContacts();
+      if (allContacts) setContacts(allContacts);
+    };
+
+    getAllContacts();
   }, []);
 
   useEffect(() => {
