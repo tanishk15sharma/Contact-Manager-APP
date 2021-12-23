@@ -25,14 +25,18 @@ function App() {
       id: uuid(),
       ...contact,
     };
-    const response = await api.post("contacts", request);
+    const response = await api.post("contacts", request); //posting the contact in the api
     setContacts([...contacts, response.data]);
   };
 
-  const removeContactHandler = (id) => {
+  const removeContactHandler = async (id) => {
+    await api.delete(`/contacts/${id}`);
+
     const newContactList = contacts.filter((contact) => {
       return contact.id !== id;
     });
+
+    const newResponse = api.delete(id);
 
     setContacts(newContactList);
   };
