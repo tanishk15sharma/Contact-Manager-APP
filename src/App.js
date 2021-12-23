@@ -7,7 +7,6 @@ import AddContact from "./components/AddContact";
 import Header from "./components/Header";
 import ContactList from "./components/ContactList";
 import ContactDetails from "./components/ContactDetail";
-import DeleteMessage from "./components/deleteConfirmation";
 
 function App() {
   const [contacts, setContacts] = useState([]);
@@ -58,7 +57,6 @@ function App() {
             }
           />
           <Route path="/contact/:id" element={<ContactDetails />} />
-          <Route path="/confirm" element={<DeleteMessage />} />
         </Routes>
         {/* <AddContact addContactHandler={addContactHandler} /> */}
         {/* <ContactList contacts={contacts} getContactId={removeContactHandler} /> */}

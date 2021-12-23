@@ -41,20 +41,17 @@ const AddContact = (props) => {
   // };
 
   const add = (e) => {
-    // const navigate = useNavigate();
+    // const navigate = useNavigate();   wrong ! it should be at the top of the functional component
 
     e.preventDefault();
     if (state.name === "" || state.number === "") {
       alert("ALl the fields are mandatory!");
       return;
     }
-    console.log(state);
-    props.addContactHandler(state);
+    // console.log(state);
+    props.addContactHandler(state); //sending state to our function in the app
     setState({ name: "", number: "" });
-    // console.log(props);
-    // const navigate = useNavigate();
-    // props.history.push("/");
-    // useHistory().push("/");
+
     navigate("/");
   };
 

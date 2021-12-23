@@ -6,26 +6,19 @@ const ContactList = (props) => {
   // console.log(props);
 
   const deleteContactHandler = (id) => {
-    props.getContactId(id); //this will give ID to App.js (to main parent  )
+    props.getContactId(id); //this will give ID to App.js (to main parent)
     // console.log(id);
   };
 
-  // const contacts = [
-  //   {
-  //     id: "1",
-  //     name: "kaka",
-  //     number: "1212",
-  //   },
-  // ];
-
   const renderContactList = props.contacts.map((contact) => {
-    // console.log(contact.name);
     return (
-      <ContactCard
-        contact={contact}
-        clickHandler={deleteContactHandler}
-        key={contact.id}
-      />
+      <div>
+        <ContactCard
+          contact={contact}
+          clickHandler={deleteContactHandler}
+          key={contact.id}
+        />
+      </div>
     );
   });
 
