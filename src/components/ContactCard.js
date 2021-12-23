@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import avatar from "./avatar.png";
 import { confirmAlert } from "react-confirm-alert"; // Import
 import "react-confirm-alert/src/react-confirm-alert.css"; // Import css
+// import edit from "edit.png";
+import Edit from "./Edit-icon.png";
 
 const ContactCard = (props) => {
   const { number, id, name } = props.contact;
@@ -37,6 +39,9 @@ const ContactCard = (props) => {
       </div>
       <div className="btn-box">
         {/* <Link to={"/confirm"}> */}
+
+        <img src={Edit} width={45} className="edit-icon" />
+
         <img
           className="del-btn"
           src="https://img.icons8.com/windows/50/fa314a/trash.png"

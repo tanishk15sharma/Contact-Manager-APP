@@ -108,3 +108,7 @@
   text-align: center;
   justify-content: center;
 }
+
+.edit-icon {
+  cursor: pointer;
+}
