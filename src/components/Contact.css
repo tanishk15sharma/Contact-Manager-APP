@@ -130,9 +130,10 @@ a {
   padding: 10px 15px;
   cursor: pointer;
   color: white;
-  border-radius: 5px;
-  margin-left: 16%;
-  width: 110px;
+  /* border-radius: 5px; */
+  /* margin-left: 16%; */
+  /* width: 110px; */
+  font-size: larger;
 }
 .add-contact-btn:hover {
   background-color: #477cf0;
