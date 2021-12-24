@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Sans:ital@0;1&family=Roboto:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Sans:ital@0;1&family=Open+Sans&family=Roboto:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Sans:ital@0;1&family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Sans:ital@0;1&family=Open+Sans&family=Roboto:wght@700&display=swap");
 
 .header-container {
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 200%;
   margin: 20px auto;
   border-bottom: 2px solid gray;
@@ -11,7 +11,7 @@
 }
 
 .AddContact-container {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .contact-header {
@@ -138,4 +138,17 @@
 
 .edit-icon {
   cursor: pointer;
+}
+
+.search-name-div {
+  text-align: center;
+}
+
+.prompt {
+  padding: 0.5rem;
+  width: 90%;
+  opacity: 0.9;
+  font-family: sans-serif;
+  border-radius: 5px;
+  border-color: lightgray;
 }
