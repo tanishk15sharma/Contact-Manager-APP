@@ -43,6 +43,16 @@
 
 .item {
   margin-top: 1%;
+  /* background-color: #2563eb; */
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.user-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
 }
 
 .contact-name {
@@ -50,7 +60,7 @@
 }
 
 .btn-box {
-  text-align: end;
+  display: flex;
 }
 .del-btn {
   font-size: xx-small;

@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import "./Contact.css";
 import { useNavigate, useLocation } from "react-router-dom";
 
-const EditContact = (props) => {
+const EditContact = ({ updateContactHandler }) => {
+  // console.log(props);
   const navigate = useNavigate();
   const location = useLocation();
   const { id, name, number } = location.state.contact;
@@ -26,7 +27,7 @@ const EditContact = (props) => {
       return;
     }
     // console.log(state);
-    props.addContactHandler(state); //sending state to our function in the app
+    updateContactHandler(state); //sending state to our function in the app
     setState({ name: "", number: "" });
 
     navigate("/");
@@ -34,7 +35,7 @@ const EditContact = (props) => {
 
   return (
     <div className="AddContact-container">
-      <h2>Add Contact</h2>
+      <h2>Edit Contact</h2>
       <form onSubmit={update}>
         <div className="name-container">
           <label>
@@ -64,7 +65,7 @@ const EditContact = (props) => {
             onChange={changeHandler}
           />
         </div>
-        <button className="add-btn">Add</button>
+        <button className="add-btn">Update</button>
       </form>
     </div>
   );

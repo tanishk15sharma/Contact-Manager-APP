@@ -30,7 +30,9 @@ function App() {
     setContacts([...contacts, response.data]);
   };
 
-  const updateContactHandler = () => {};
+  const updateContactHandler = () => {
+    console.log("hii");
+  };
 
   const removeContactHandler = async (id) => {
     await api.delete(`/contacts/${id}`); //api data will also be deleted
@@ -83,8 +85,9 @@ function App() {
 
           <Route
             path="/edit"
-            element={<EditContact />}
-            updateContactHandler={updateContactHandler}
+            element={
+              <EditContact updateContactHandler={updateContactHandler} />
+            }
           />
 
           <Route path="/contact/:id" element={<ContactDetails />} />

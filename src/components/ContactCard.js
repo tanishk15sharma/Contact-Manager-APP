@@ -29,18 +29,44 @@ const ContactCard = (props) => {
   return (
     <div className="manager-box">
       <div className="item">
-        <img src={avatar} className="avatar-img" alt="avatar" />
+        <div className="user-div">
+          {/* <img src={avatar} className="avatar-img" alt="avatar" /> */}
 
-        <Link to={`/contact/${id}`} state={{ contact: props.contact }}>
-          <div className="contact-name"> {name} </div>
-          <div className="contact-number">{number} </div>
-        </Link>
+          <Link to={`/contact/${id}`} state={{ contact: props.contact }}>
+            <div>
+              {/* <img src={avatar} className="avatar-img" alt="avatar" /> */}
+            </div>
+            <div>
+              <img src={avatar} className="avatar-img" alt="avatar" />
+
+              <span className="contact-name"> {name} </span>
+              <br></br>
+              <span className="contact-number">{number} </span>
+            </div>
+          </Link>
+        </div>
         {/* <img src="https://img.icons8.com/windows/50/fa314a/trash.png" /> */}
+        <div className="btn-box">
+          {/* <Link to={"/confirm"}> */}
+
+          <Link to={"/edit"} state={{ contact: props.contact }}>
+            <img src={Edit} width={45} className="edit-icon" />
+          </Link>
+
+          <img
+            className="del-btn"
+            src="https://img.icons8.com/windows/50/fa314a/trash.png"
+            alt="Trash Icon to del contact"
+            onClick={() => deleteAction(id)} //this will give id to contactList (its parent)
+          />
+          {/* </Link> */}
+          {/* <button className="del-btn">Remove</button> */}
+        </div>
       </div>
-      <div className="btn-box">
+      {/* <div className="btn-box">
         {/* <Link to={"/confirm"}> */}
 
-        <Link to={"/edit"} state={{ contact: props.contact }}>
+      {/* <Link to={"/edit"} state={{ contact: props.contact }}>
           <img src={Edit} width={45} className="edit-icon" />
         </Link>
 
@@ -49,10 +75,9 @@ const ContactCard = (props) => {
           src="https://img.icons8.com/windows/50/fa314a/trash.png"
           alt="Trash Icon to del contact"
           onClick={() => deleteAction(id)} //this will give id to contactList (its parent)
-        />
-        {/* </Link> */}
-        {/* <button className="del-btn">Remove</button> */}
-      </div>
+        /> */}
+      {/* </Link> */}
+      {/* <button className="del-btn">Remove</button> */}
     </div>
   );
 };
