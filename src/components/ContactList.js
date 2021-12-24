@@ -31,7 +31,7 @@ const ContactList = (props) => {
   return (
     <div>
       <div className="contact-header">
-        <h2>Contact List</h2>
+        <h2 className="list-heading">Contact List</h2>
         <Link to="/add">
           <button className="add-contact-btn">Add Contact</button>
         </Link>
@@ -46,9 +46,11 @@ const ContactList = (props) => {
           onChange={getSearchTerm}
         />
       </div>
-      {renderContactList.length > 0
-        ? renderContactList
-        : "No Contacts Available"}
+      {renderContactList.length > 0 ? (
+        renderContactList
+      ) : (
+        <p className="no-contact-msg"> No Contacts Available</p>
+      )}
     </div>
   );
 };

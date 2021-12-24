@@ -5,6 +5,10 @@ a {
   text-decoration: none;
 }
 
+.list-heading {
+  font-family: "Open Sans", sans-serif;
+}
+
 .header-container {
   text-align: center;
   font-family: "Roboto", sans-serif;
@@ -48,6 +52,10 @@ a {
   cursor: pointer;
   font-size: larger;
 }
+.add-btn:hover {
+  background-color: #477cf0;
+}
+
 .manager-box {
   border-top: 1px solid lightgray;
   /* margin-bottom: 1%; */
@@ -68,13 +76,22 @@ a {
 .user-info-div {
   padding-top: 15px;
 }
-.user-info-text {
+.user-info-text1 {
   display: block;
   /* text-decoration: line-through; */
   /* border: 2px solid rebeccapurple; */
   color: black;
   /* padding-top: 5px; */
 }
+
+.user-info-text2 {
+  display: block;
+  /* text-decoration: line-through; */
+  /* border: 2px solid rebeccapurple; */
+  color: blue;
+  /* padding-top: 5px; */
+}
+
 .user-info {
   display: block;
   padding-top: 5px;
@@ -117,6 +134,9 @@ a {
   margin-left: 16%;
   width: 110px;
 }
+.add-contact-btn:hover {
+  background-color: #477cf0;
+}
 
 .detail-container {
   max-width: 40%;
@@ -129,20 +149,30 @@ a {
 .btn-div {
   text-align: center;
 }
+.no-contact-msg {
+  text-align: center;
+  font-size: larger;
+  color: grey;
+}
 
 .btn-detail {
-  background-color: grey;
+  color: white;
+  background-color: #2563eb;
   padding: 0.5rem;
   border: 0;
   border-radius: 5px;
   font-size: larger;
   cursor: pointer;
 }
+.btn-detail:hover {
+  background-color: #477cf0;
+}
 .main-detail {
   /* text-align: center; */
   display: grid;
   place-items: center;
   gap: 1rem;
+  padding: 1rem;
 }
 .img-div {
   text-align: center;

@@ -34,8 +34,8 @@ const ContactCard = (props) => {
           <div className="user-div">
             <img src={avatar} className="avatar-img" alt="avatar" />
             <div className="user-info-div">
-              <span className="user-info-text">{name}</span>
-              <span className="user-info-text">{number}</span>
+              <span className="user-info-text1">{name}</span>
+              <span className="user-info-text2">{number}</span>
             </div>
           </div>
         </Link>
