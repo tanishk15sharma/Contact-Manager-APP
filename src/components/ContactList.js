@@ -1,16 +1,16 @@
-import React from "react";
-import ContactCard from "./ContactCard";
-import { Link } from "react-router-dom";
+import React from 'react'
+import ContactCard from './ContactCard'
+import { Link } from 'react-router-dom'
 
-const ContactList = (props) => {
+const ContactList = props => {
   // console.log(props);
 
-  const deleteContactHandler = (id) => {
-    props.getContactId(id); //this will give ID to App.js (to main parent)
+  const deleteContactHandler = id => {
+    props.getContactId(id) //this will give ID to App.js (to main parent)
     // console.log(id);
-  };
+  }
 
-  const renderContactList = props.contacts.map((contact) => {
+  const renderContactList = props.contacts.map(contact => {
     return (
       <div>
         <ContactCard
@@ -19,20 +19,20 @@ const ContactList = (props) => {
           key={contact.id}
         />
       </div>
-    );
-  });
+    )
+  })
 
   return (
     <div>
-      <h1>
-        Contact List
+      <div className="contact-header">
+        <h1>Contact List</h1>
         <Link to="/add">
           <button className="add-contact-btn">Add Contact</button>
         </Link>
-      </h1>
+      </div>
       {renderContactList}
     </div>
-  );
-};
+  )
+}
 
-export default ContactList;
+export default ContactList
