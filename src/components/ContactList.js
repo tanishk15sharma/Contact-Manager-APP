@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useRef } from "react";
 import ContactCard from "./ContactCard";
 import { Link } from "react-router-dom";
 
 const ContactList = (props) => {
-  // console.log(props);
+  console.log(props);
+  const inputE1 = useRef("");
 
   const deleteContactHandler = (id) => {
     props.getContactId(id); //this will give ID to App.js (to main parent)
@@ -22,6 +23,8 @@ const ContactList = (props) => {
     );
   });
 
+  const getSearchTerm = () => {};
+
   return (
     <div>
       <div className="contact-header">
@@ -31,7 +34,13 @@ const ContactList = (props) => {
         </Link>
       </div>
       <div className="search-name-div">
-        <input type="text" placeholder="Search Contacts" className="prompt" />
+        <input
+          type="text"
+          placeholder="Search Contacts"
+          className="prompt-search"
+          value={props.term}
+          onChange={getSearchTerm}
+        />
       </div>
       {renderContactList}
     </div>

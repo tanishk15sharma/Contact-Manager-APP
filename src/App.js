@@ -12,6 +12,7 @@ import EditContact from "./components/EditContact";
 
 function App() {
   const [contacts, setContacts] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
   const LOCAL_STORAGE_KEY = "contacts";
 
   //this will retrieve contacts
@@ -53,6 +54,8 @@ function App() {
     setContacts(newContactList);
   };
 
+  const searchHandler = () => {};
+
   //previously we are taking data from local storage .
   //Now we will take the data from the server
   useEffect(() => {
@@ -86,6 +89,8 @@ function App() {
               <ContactList
                 contacts={contacts}
                 getContactId={removeContactHandler}
+                term={searchTerm}
+                searchKeyWord={searchHandler}
               />
             }
           />
