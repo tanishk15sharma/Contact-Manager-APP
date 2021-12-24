@@ -1,13 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Sans:ital@0;1&family=Roboto:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Sans:ital@0;1&family=Open+Sans&family=Roboto:wght@700&display=swap");
 
+a {
+  text-decoration: none;
+}
+
 .header-container {
   text-align: center;
   font-family: "Roboto", sans-serif;
   font-size: 200%;
-  margin: 20px auto;
-  border-bottom: 2px solid gray;
-  padding: 1rem;
+  /* margin: 0px auto; */
+  border-bottom: 10px solid gray;
+  /* padding: 1rem; */
+}
+
+.contact-img {
+  width: 100%;
 }
 
 .AddContact-container {
@@ -21,18 +29,17 @@
 }
 
 .input-box1 {
-  width: 100%;
+  width: 96%;
   padding: 0.5rem;
   margin-bottom: 1%;
 }
 
 .input-box2 {
-  width: 100%;
+  width: 96%;
   padding: 0.5rem;
   margin-bottom: 1%;
 }
 .add-btn {
-  width: 15%;
   padding: 0.6rem;
   background-color: #2563eb;
   color: white;
@@ -43,27 +50,30 @@
 }
 .manager-box {
   border-top: 1px solid lightgray;
-  margin-bottom: 1%;
-  margin-top: 2%;
+  /* margin-bottom: 1%; */
+  /* margin-top: 2%; */
 }
 
 .item {
-  margin-top: 1%;
+  /* margin-top: 1%; */
   /* background-color: #2563eb; */
   display: flex;
   align-items: center;
-  padding: 10px 20px;
+  /* padding: 1px 0px; */
 }
 
 .user-div {
   display: flex;
 }
 .user-info-div {
-  padding-top: 20px;
+  padding-top: 15px;
 }
 .user-info-text {
   display: block;
-  padding-top: 5px;
+  /* text-decoration: line-through; */
+  /* border: 2px solid rebeccapurple; */
+  color: black;
+  /* padding-top: 5px; */
 }
 .user-info {
   display: block;
@@ -92,7 +102,7 @@
 .avatar-img {
   /* size: 10%; */
   /* font-size: 10%; */
-  max-width: 15%;
+  max-width: 10%;
   border-radius: 100%;
   padding: 1rem;
 }
@@ -130,6 +140,9 @@
 }
 .main-detail {
   /* text-align: center; */
+  display: grid;
+  place-items: center;
+  gap: 1rem;
 }
 .img-div {
   text-align: center;

@@ -11,7 +11,7 @@ const ContactDetails = () => {
     <div className="main-detail">
       <div className="detail-container">
         <div className="img-div">
-          <img src={dummy} width={200} alt="user" />
+          <img src={dummy} alt="user" className="contact-img" />
         </div>
         <div className="detail-content">
           <div className="detail-name">{name}</div>

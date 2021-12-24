@@ -1,30 +1,31 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import avatar from './avatar.png'
-import { confirmAlert } from 'react-confirm-alert' // Import
-import 'react-confirm-alert/src/react-confirm-alert.css' // Import css
+import React from "react";
+import { Link } from "react-router-dom";
+import avatar from "./avatar.png";
+import { confirmAlert } from "react-confirm-alert"; // Import
+import "react-confirm-alert/src/react-confirm-alert.css"; // Import css
 // import edit from "edit.png";
-import Edit from './Edit-icon.png'
+import Edit from "./Edit-icon.png";
+import "./Contact.css";
 
-const ContactCard = props => {
-  const { number, id, name } = props.contact
+const ContactCard = (props) => {
+  const { number, id, name } = props.contact;
 
-  const deleteAction = id => {
+  const deleteAction = (id) => {
     confirmAlert({
-      title: 'Delete contact',
-      message: 'Are you sure to do this ?',
+      title: "Delete contact",
+      message: "Are you sure to do this ?",
       buttons: [
         {
-          label: 'Yes',
+          label: "Yes",
           onClick: () => props.clickHandler(id),
         },
         {
-          label: 'No',
+          label: "No",
           onClick: () => null,
         },
       ],
-    })
-  }
+    });
+  };
 
   return (
     <div className="manager-box">
@@ -39,8 +40,8 @@ const ContactCard = props => {
           </div>
         </Link>
         <div className="btn-box">
-          <Link to={'/edit'} state={{ contact: props.contact }}>
-            <img src={Edit} width={45} className="edit-icon" />
+          <Link to={"/edit"} state={{ contact: props.contact }}>
+            <img src={Edit} width={45} height={45} className="edit-icon" />
           </Link>
 
           <img
@@ -48,11 +49,13 @@ const ContactCard = props => {
             src="https://img.icons8.com/windows/50/fa314a/trash.png"
             alt="Trash Icon to del contact"
             onClick={() => deleteAction(id)} //this will give id to contactList (its parent)
+            width={50}
+            height={45}
           />
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ContactCard
+export default ContactCard;

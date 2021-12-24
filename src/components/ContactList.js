@@ -31,7 +31,7 @@ const ContactList = (props) => {
   return (
     <div>
       <div className="contact-header">
-        <h1>Contact List</h1>
+        <h2>Contact List</h2>
         <Link to="/add">
           <button className="add-contact-btn">Add Contact</button>
         </Link>
