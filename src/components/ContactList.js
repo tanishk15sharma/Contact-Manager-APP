@@ -23,7 +23,10 @@ const ContactList = (props) => {
     );
   });
 
-  const getSearchTerm = () => {};
+  const getSearchTerm = () => {
+    // console.log(inputE1.current.value);
+    props.searchKeyWord(inputE1.current.value);
+  };
 
   return (
     <div>
@@ -35,6 +38,7 @@ const ContactList = (props) => {
       </div>
       <div className="search-name-div">
         <input
+          ref={inputE1}
           type="text"
           placeholder="Search Contacts"
           className="prompt-search"
