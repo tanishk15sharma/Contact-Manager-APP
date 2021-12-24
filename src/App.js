@@ -57,8 +57,20 @@ function App() {
 
   const searchHandler = (keyWord) => {
     //we are getting the search term from ContactList input
-    console.log(keyWord);
+    // console.log(keyWord);
     setSearchTerm(keyWord);
+
+    if (keyWord !== "") {
+      const newContactList = contacts.filter((contact) => {
+        return Object.values(contact)
+          .join(" ")
+          .toLowerCase()
+          .includes(keyWord.toLowerCase());
+      });
+      setSearchResult(newContactList);
+    } else {
+      setSearchResult(contacts);
+    }
   };
 
   //previously we are taking data from local storage .
@@ -92,7 +104,7 @@ function App() {
             path="/"
             element={
               <ContactList
-                contacts={contacts}
+                contacts={searchTerm.length < 1 ? contacts : searchResult}
                 getContactId={removeContactHandler}
                 term={searchTerm}
                 searchKeyWord={searchHandler}
