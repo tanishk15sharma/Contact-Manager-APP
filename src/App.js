@@ -14,7 +14,7 @@ function App() {
   const [contacts, setContacts] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResult, setSearchResult] = useState([]);
-  const LOCAL_STORAGE_KEY = "contacts";
+  // const LOCAL_STORAGE_KEY = "contacts";used as local storage but now we have json server backend
 
   //this will retrieve contacts
   const retrieveContacts = async () => {

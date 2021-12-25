@@ -8,7 +8,6 @@ const ContactList = (props) => {
 
   const deleteContactHandler = (id) => {
     props.getContactId(id); //this will give ID to App.js (to main parent)
-    // console.log(id);
   };
 
   const renderContactList = props.contacts.map((contact) => {
