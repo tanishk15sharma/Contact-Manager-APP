@@ -41,7 +41,13 @@ const ContactCard = (props) => {
         </Link>
         <div className="btn-box">
           <Link to={"/edit"} state={{ contact: props.contact }}>
-            <img src={Edit} width={45} height={45} className="edit-icon" />
+            <img
+              src={Edit}
+              width={45}
+              height={45}
+              className="edit-icon"
+              alt="edit"
+            />
           </Link>
 
           <img
