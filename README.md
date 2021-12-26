@@ -4,10 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This Application is used for managing and collecting user contacts .
 user can perform CURD operations in thie Applications according to his/her needs and it is build on JavaScript libarary React.
+This application is responsive in nature
 
-## Available Scripts
-
-In the project directory, you can run:
+## Depolyment
+https://contact-collector-app.herokuapp.com/
+Deployed using heroku 
 
 ### `App data`
 
